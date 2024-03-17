@@ -8,18 +8,8 @@ import mongoose from "mongoose";
 import schema from "./graphql";
 const app = express();
 
-// mongoose.connect("mongodb://localhost:27017");
-// const db = mongoose.connection;
-// db.on("error", () => console.log("Failed to connect to DB.")).once("open", () =>
-//   console.log("Connected to DB. ")
-// );
-
 mongoose
-  // .connect(process.env.CONNECTION_STRING, {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  //   dbName: "mean-eshop",
-  // })
+
   .connect("mongodb://127.0.0.1:27017", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
