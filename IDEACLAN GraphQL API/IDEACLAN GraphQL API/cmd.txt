@@ -1,0 +1,70 @@
+mutation{
+  addUser(data: {
+    email: "example3@gmail.com",
+    name :"john"
+  }) {
+    email
+    name
+    _id
+  }
+}
+
+
+
+mutation{
+  updateUser(id:"65f5acb69455b565ecf51fdf",
+    data: {
+    email: "example4@gmail.com",
+    name :"john 4"
+  }) {
+    email
+    name
+    _id
+  }
+}
+
+
+
+mutation{
+  addPost(
+    
+    data: {
+    uid:"65f5acb69455b565ecf51fdf",
+    title :"hi it my blog",
+      body :"param100"
+  }) {
+    _id
+    uid
+    title
+    body
+  } 
+}
+
+
+query{
+  User(id:"65f5acb69455b565ecf51fdf") {
+    _id
+    email
+    name
+  }
+}
+
+
+query{
+  Users {
+    email
+    name
+  }
+
+
+  query{
+  Users {
+    email
+    name
+    posts {
+      uid
+      title
+      body
+    }
+  }
+}
